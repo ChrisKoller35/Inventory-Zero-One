@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INVENTORY ZERO-ONE</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Animated Background -->
+    <div class="cyber-grid"></div>
+    <div class="scan-line"></div>
+    
+    <!-- Header -->
+    <header class="main-header">
+        <div class="header-content">
+            <div class="logo-section">
+                <div class="logo-icon">
+                    <svg viewBox="0 0 100 100" class="logo-svg">
+                        <polygon points="50,5 95,30 95,70 50,95 5,70 5,30" fill="none" stroke="currentColor" stroke-width="2"/>
+                        <polygon points="50,20 80,35 80,65 50,80 20,65 20,35" fill="none" stroke="currentColor" stroke-width="1.5"/>
+                        <circle cx="50" cy="50" r="15" fill="none" stroke="currentColor" stroke-width="2"/>
+                        <circle cx="50" cy="50" r="5" fill="currentColor"/>
+                    </svg>
+                </div>
+                <div class="logo-text">
+                    <h1>INVENTORY</h1>
+                    <span class="logo-subtitle">ZERO-ONE</span>
+                </div>
+            </div>
+            <div class="header-stats">
+                <div class="stat-box">
+                    <span class="stat-value" id="totalItems">001/???</span>
+                    <span class="stat-label">DISCOVERED</span>
+                </div>
+            </div>
+        </div>
+        <div class="header-line"></div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="inventory-container">
+        <div class="inventory-grid" id="inventoryGrid">
+            <!-- Items werden durch JavaScript eingefügt -->
+        </div>
+    </main>
+
+    <!-- Modal Popup -->
+    <div class="modal-overlay" id="modalOverlay">
+        <div class="modal-container">
+            <button class="modal-close" id="modalClose">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+            </button>
+            
+            <div class="modal-content">
+                <!-- Linke Seite: Bild -->
+                <div class="modal-image-section">
+                    <div class="modal-image-frame">
+                        <img src="" alt="" id="modalImage" class="modal-image">
+                        <div class="image-corner top-left"></div>
+                        <div class="image-corner top-right"></div>
+                        <div class="image-corner bottom-left"></div>
+                        <div class="image-corner bottom-right"></div>
+                    </div>
+                    <div class="modal-category" id="modalCategory">KATEGORIE</div>
+                </div>
+                
+                <!-- Rechte Seite: Infos -->
+                <div class="modal-info-section">
+                    <div class="modal-header">
+                        <h2 class="modal-title" id="modalTitle">Item Name</h2>
+                        <div class="modal-id" id="modalId">#001</div>
+                    </div>
+                    
+                    <div class="modal-description" id="modalDescription">
+                        Beschreibung des Gegenstands...
+                    </div>
+                    
+                    <div class="modal-stats-grid">
+                        <div class="modal-stat">
+                            <div class="stat-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/>
+                                </svg>
+                            </div>
+                            <div class="stat-content">
+                                <span class="stat-title">SELTENHEIT</span>
+                                <span class="stat-data" id="modalRarity">Legendär</span>
+                            </div>
+                        </div>
+                        
+                        <div class="modal-stat">
+                            <div class="stat-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M4 7h16M4 12h16M4 17h10"/>
+                                </svg>
+                            </div>
+                            <div class="stat-content">
+                                <span class="stat-title">KATEGORIE</span>
+                                <span class="stat-data" id="modalDate">01.01.2026</span>
+                            </div>
+                        </div>
+                        
+                        <div class="modal-stat">
+                            <div class="stat-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>
+                                </svg>
+                            </div>
+                            <div class="stat-content">
+                                <span class="stat-title">POWER</span>
+                                <span class="stat-data" id="modalCondition">Neuwertig</span>
+                            </div>
+                        </div>
+                        
+                        <div class="modal-stat bonus-effect">
+                            <div class="stat-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <rect x="3" y="8" width="18" height="14" rx="2"/>
+                                    <path d="M12 8V22"/>
+                                    <path d="M3 12h18"/>
+                                    <path d="M12 8c-2-3-6-3-6 0s4 0 6 0c2 0 6-3 6 0s-4 3-6 0"/>
+                                </svg>
+                            </div>
+                            <div class="stat-content">
+                                <span class="stat-data bonus-text" id="modalLocation">Bonus Effekt</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="modal-notes">
+                        <h3>NOTIZEN</h3>
+                        <p id="modalNotes">Zusätzliche Informationen zum Gegenstand...</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="modal-footer">
+                <div class="tech-line"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="footer-content">
+            <span class="footer-text">INVENTORY ZERO-ONE SYSTEM v1.0</span>
+            <span class="footer-status">● ONLINE</span>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
