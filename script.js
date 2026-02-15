@@ -18,15 +18,15 @@ const inventoryItems = [
     },
     {
         id: "002",
-        name: "Artefakt #002",
-        category: "???",
-        description: "Dieses Artefakt wurde noch nicht entdeckt.",
-        rarity: "unknown",
-        condition: "Unbekannt",
-        date: "???",
-        location: "???",
-        notes: "LOCATION UNKNOWN|Awaiting discovery...",
-        image: ""
+        name: "Gewöhnlicher Oranger Hut",
+        category: "Fun",
+        description: "Ein einfacher Hut für ein bisschen Style im Alltag.",
+        rarity: "common",
+        condition: "Keine",
+        date: "Fun",
+        location: "",
+        notes: "Vielleicht kann er irgendwann mal wieder verwendet werden.",
+        image: "images/Artefakt002.png"
     },
     {
         id: "003",
@@ -240,6 +240,12 @@ function openModal(item) {
     modalCondition.textContent = item.condition;
     modalLocation.textContent = item.location;
     modalNotes.textContent = item.notes;
+    
+    // Bonuseffekt-Feld ausblenden wenn leer
+    const bonusEffectDiv = document.querySelector('.modal-stat.bonus-effect');
+    if (bonusEffectDiv) {
+        bonusEffectDiv.style.display = item.location && item.location.trim() !== '' ? '' : 'none';
+    }
     
     // Seltenheits-Farbe anpassen
     const rarityColors = {
