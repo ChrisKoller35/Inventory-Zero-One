@@ -100,6 +100,82 @@ body {
     margin: 0 auto;
 }
 
+/* TikTok Button */
+.tiktok-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.arrows {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 900;
+    color: #00f0ff;
+    text-shadow: 0 0 10px #00f0ff, 0 0 20px #00f0ff, 0 0 30px #0080ff;
+    letter-spacing: -2px;
+}
+
+.arrows-left {
+    animation: pointRight 1s ease-in-out infinite;
+}
+
+.arrows-right {
+    animation: pointLeft 1s ease-in-out infinite;
+}
+
+@keyframes pointRight {
+    0%, 100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+    50% {
+        transform: translateX(8px);
+        opacity: 0.6;
+    }
+}
+
+@keyframes pointLeft {
+    0%, 100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+    50% {
+        transform: translateX(-8px);
+        opacity: 0.6;
+    }
+}
+
+.tiktok-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 20px;
+    background: linear-gradient(135deg, #00f0ff 0%, #0080ff 50%, #000000 100%);
+    border: none;
+    border-radius: 8px;
+    color: var(--text-primary);
+    font-family: 'Orbitron', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 700;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 15px rgba(0, 240, 255, 0.4);
+}
+
+.tiktok-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0 25px rgba(0, 240, 255, 0.6), 0 0 25px rgba(0, 128, 255, 0.4);
+}
+
+.tiktok-icon {
+    width: 20px;
+    height: 20px;
+}
+
 .logo-section {
     display: flex;
     align-items: center;
