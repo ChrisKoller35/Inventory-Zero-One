@@ -30,15 +30,15 @@ const inventoryItems = [
     },
     {
         id: "003",
-        name: "Artefakt #003",
-        category: "???",
-        description: "Dieses Artefakt wurde noch nicht entdeckt.",
-        rarity: "unknown",
-        condition: "Unbekannt",
-        date: "???",
-        location: "???",
-        notes: "LOCATION UNKNOWN|Awaiting discovery...",
-        image: ""
+        name: "Gewöhnlicher alter Tisch",
+        category: "Alltag",
+        description: "Ein liebevoll aufgearbeiteter kleiner Holztisch.",
+        rarity: "common",
+        condition: "Charme",
+        date: "Alltag",
+        location: "",
+        notes: "Ein schön aufgearbeiteter kleiner Holztisch, der jedem Raum ein bisschen Wärme verleiht.",
+        image: "images/Artefakt003.png"
     },
     {
         id: "004",
