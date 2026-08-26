@@ -42,15 +42,15 @@ const inventoryItems = [
     },
     {
         id: "004",
-        name: "Artefakt #004",
-        category: "???",
-        description: "Dieses Artefakt wurde noch nicht entdeckt.",
-        rarity: "unknown",
-        condition: "Unbekannt",
-        date: "???",
-        location: "???",
-        notes: "LOCATION UNKNOWN|Awaiting discovery...",
-        image: ""
+        name: "Mystische Box",
+        category: "Mystisch",
+        description: "Ein vielseitiges Gefäß für alles, was du darin aufbewahren möchtest.",
+        rarity: "rare",
+        condition: "Vielseitig",
+        date: "Mystisch",
+        location: "",
+        notes: "Ob Kaffee, Tee oder Kräuter, was hineinkommt bleibt ganz dir überlassen.",
+        image: "images/Artefakt004.png"
     },
     {
         id: "005",
